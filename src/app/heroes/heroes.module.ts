@@ -13,6 +13,7 @@ import { HeroImagePipe } from './pipes/hero-image.pipe';
 import { provideClientHydration } from '@angular/platform-browser';
 import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 
 
 @NgModule({
@@ -30,10 +31,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeroesRoutingModule,
     MaterialModule,
     MatButtonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
-    provideClientHydration()
-  ]
+    provideClientHydration()  ]
 })
 export class HeroesModule { }
